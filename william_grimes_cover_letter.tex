@@ -1,0 +1,60 @@
+\documentclass[a4paper, 11pt]{letter}
+
+\usepackage[left=0.5in,right=0.5in,top=0.5in,bottom=0.5in]{geometry}
+\setlength{\voffset}{-0.5in}
+\setlength{\headsep}{20pt}
+
+\usepackage{charter}
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{lipsum}
+
+\usepackage{marvosym} % contact symbols
+\usepackage[usenames, dvipsnames]{color}
+\definecolor{customgrey}{gray}{0.35}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, urlcolor=customgrey}
+
+\newcommand\markup[1]{{\textcolor{customgrey}{#1}}}
+
+\date{\today}
+\signature{William Grimes}
+
+\makeatletter
+\setlength{\@fptop}{0pt}
+\makeatother
+
+\begin{document}
+\begin{letter}{Mrs. Jane Smith \\
+			   Recruitment Officer \\
+		   	   The Corporation \\
+               123 Pleasant Lane \\
+               City, State 12345} 
+
+\noindent
+    \begin{tabularx}{\textwidth}{@{} l >{\raggedright\arraybackslash}X}
+        \multirow{2}{*}{{\fontsize{30}{38}\selectfont William Grimes}}             
+          & \hfill \Mobilefone \ \markup{               } \\
+          & \hfill \Letter \ \href{mailto:williamgrimes@gmx.com}{williamgrimes@gmx.com} \\
+          & \hfill \ComputerMouse \ \url{www.linkedin.com/in/william-grimes}
+    \end{tabularx}
+%\centerline{{\Huge William Grimes}}\vspace{0.5em}
+%% CONTACT
+%\begin{tabularx}{\linewidth}{l c r}
+%    \Mobilefone \ \markup{               } &
+%    \ComputerMouse \ \url{www.linkedin.com/in/william-grimes} &
+%    \Letter \ \href{mailto:williamgrimes@gmx.com}{williamgrimes@gmx.com}
+%\end{tabularx}
+\hrule 
+~ \newline ~ \newline ~ \newline
+
+\opening{Dear **********,} 
+ 
+\lipsum[2-4]
+
+\closing{Yours sincerely,}
+
+
+\encl{Curriculum vitae}
+\end{letter}
+\end{document}
