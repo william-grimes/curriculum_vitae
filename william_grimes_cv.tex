@@ -3,6 +3,7 @@
 \usepackage[left=0.5in,right=0.5in,top=0.5in,bottom=0.5in]{geometry}
 \usepackage{charter}
 \usepackage{tabularx}
+\usepackage{multirow}
 
 \usepackage{marvosym} % contact symbols
 \usepackage[usenames, dvipsnames]{color}
@@ -13,15 +14,14 @@
 \newcommand\markup[1]{{\textcolor{customgrey}{#1}}}
 
 \begin{document}
-    \centerline{{\Huge William Grimes}}\vspace{0.5em}
-    % CONTACT
-    \begin{tabularx}{\linewidth}{l c r}
-        \Mobilefone \ \markup{               } &
-        \ComputerMouse \ \url{www.linkedin.com/in/william-grimes} &
-        \Letter \ \href{mailto:williamgrimes@gmx.com}{williamgrimes@gmx.com}
+    \noindent
+    \begin{tabularx}{\textwidth}{@{} l >{\raggedright\arraybackslash}X}
+        \multirow{2}{*}{{\fontsize{30}{38}\selectfont William Grimes}}             
+          & \hfill \Mobilefone \ \markup{               } \\
+          & \hfill \Letter \ \href{mailto:williamgrimes@gmx.com}{williamgrimes@gmx.com} \\
+          & \hfill \ComputerMouse \ \url{www.linkedin.com/in/william-grimes}
     \end{tabularx}
-    % HIGHLIGHTS
-    \vspace{-0.25em}\par\hbox{\large \textsc{Highlights}\strut}\hrule\vspace{-0.5em}
+    \hrule
     \begin{itemize} %\itemsep -2pt % reduce} space between items
     \setlength\itemsep{0.1em}
     	\item Data scientist with experience in imaging, text-mining, and geospatial data
