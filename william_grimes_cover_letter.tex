@@ -1,28 +1,29 @@
 \documentclass[a4paper, 11pt]{letter}
+\usepackage{geometry}
+\geometry{
+  top=3.0cm,
+  inner=1.27cm,
+  outer=1.27cm,
+  bottom=1.27cm,
+  headheight=3.0cm,
+  headsep=0.00cm,
+}
 
-\usepackage[left=0.5in,right=0.5in,top=0.5in,bottom=0.5in]{geometry}
-\setlength{\voffset}{-0.5in}
-\setlength{\headsep}{20pt}
+\usepackage{layout}
+%\AtBeginDocument{\layout*}
+%\geometry{showframe=true}
 
 \usepackage{charter}
-\usepackage{tabularx}
-\usepackage{multirow}
+\usepackage{graphicx}
 \usepackage{lipsum}
 
-\usepackage{marvosym} % contact symbols
-\usepackage[usenames, dvipsnames]{color}
-\definecolor{customgrey}{gray}{0.35}
-\usepackage{hyperref}
-\hypersetup{colorlinks=true, urlcolor=customgrey}
-
-\newcommand\markup[1]{{\textcolor{customgrey}{#1}}}
-
-\date{\today}
-\signature{William Grimes}
+\input{header.tex}
 
 \makeatletter
-\setlength{\@fptop}{0pt}
+\let\ps@firstpage\ps@fancy
 \makeatother
+
+\date{\today}
 
 \begin{document}
 \begin{letter}{Mrs. Jane Smith \\
@@ -31,23 +32,17 @@
                123 Pleasant Lane \\
                City, State 12345} 
 
-\noindent
-    \begin{tabularx}{\textwidth}{@{} l >{\raggedright\arraybackslash}X}
-        \multirow{2}{*}{{\fontsize{30}{38}\selectfont William Grimes}}             
-          & \hfill \Mobilefone \ \markup{               } \\
-          & \hfill \Letter \ \href{mailto:williamgrimes@gmx.com}{williamgrimes@gmx.com} \\
-          & \hfill \ComputerMouse \ \url{www.linkedin.com/in/william-grimes}
-    \end{tabularx}
-\hrule 
-~ \newline ~ \newline ~ \newline
-
 \opening{Dear **********,} 
  
-\lipsum[2-4]
+\lipsum[1-25]
 
-\closing{Yours sincerely,}
+\closing{Yours faithfully, \\
+    \fromsig{\includegraphics[scale=0.2]{signature.jpg}} \\ 
+    \fromname{William Grimes}
+}
 
 
 \encl{Curriculum vitae}
 \end{letter}
+
 \end{document}
