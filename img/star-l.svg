@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="8.9296789mm"
+   height="8.5860834mm"
+   viewBox="0 0 8.9296789 8.5860834"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   sodipodi:docname="lstar.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="16"
+     inkscape:cx="3.34375"
+     inkscape:cy="14.53125"
+     inkscape:window-width="2560"
+     inkscape:window-height="1395"
+     inkscape:window-x="0"
+     inkscape:window-y="45"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     inkscape:lockguides="false"
+     inkscape:showpageshadow="0"
+     inkscape:deskcolor="#d1d1d1"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
+  <defs
+     id="defs2">
+    <pattern
+       inkscape:collect="always"
+       xlink:href="#Strips1_2-5"
+       id="pattern3023-7"
+       patternTransform="matrix(1.0606329,0.93929969,-8.5088824,9.6080097,0,0)" />
+    <pattern
+       inkscape:collect="always"
+       patternUnits="userSpaceOnUse"
+       width="3"
+       height="1"
+       patternTransform="translate(0,0) scale(10,10)"
+       id="Strips1_2-5"
+       inkscape:stockid="Stripes 1:2">
+      <rect
+         style="fill:#404040;stroke:none"
+         x="0"
+         y="-0.5"
+         width="1"
+         height="2"
+         id="rect1852-3" />
+    </pattern>
+    <pattern
+       inkscape:collect="always"
+       xlink:href="#Strips1_2-2"
+       id="pattern3023-6"
+       patternTransform="matrix(1.0606329,0.93929969,-8.5088824,9.6080097,0,0)" />
+    <pattern
+       inkscape:collect="always"
+       patternUnits="userSpaceOnUse"
+       width="3"
+       height="1"
+       patternTransform="translate(0,0) scale(10,10)"
+       id="Strips1_2-2"
+       inkscape:stockid="Stripes 1:2">
+      <rect
+         style="fill:#404040;stroke:none"
+         x="0"
+         y="-0.5"
+         width="1"
+         height="2"
+         id="rect1852-9" />
+    </pattern>
+    <pattern
+       inkscape:collect="always"
+       xlink:href="#Strips1_2-7"
+       id="pattern3023-2"
+       patternTransform="matrix(1.0606329,0.93929969,-8.5088824,9.6080097,0,0)" />
+    <pattern
+       inkscape:collect="always"
+       patternUnits="userSpaceOnUse"
+       width="3"
+       height="1"
+       patternTransform="translate(0,0) scale(10,10)"
+       id="Strips1_2-7"
+       inkscape:stockid="Stripes 1:2">
+      <rect
+         style="fill:#404040;stroke:none"
+         x="0"
+         y="-0.5"
+         width="1"
+         height="2"
+         id="rect1852-0" />
+    </pattern>
+    <pattern
+       inkscape:collect="always"
+       xlink:href="#Strips1_2-6"
+       id="pattern3023-3"
+       patternTransform="matrix(1.0606329,0.93929969,-8.5088824,9.6080097,0,0)" />
+    <pattern
+       inkscape:collect="always"
+       patternUnits="userSpaceOnUse"
+       width="3"
+       height="1"
+       patternTransform="translate(0,0) scale(10,10)"
+       id="Strips1_2-6"
+       inkscape:stockid="Stripes 1:2">
+      <rect
+         style="fill:#404040;stroke:none"
+         x="0"
+         y="-0.5"
+         width="1"
+         height="2"
+         id="rect1852-06" />
+    </pattern>
+    <pattern
+       inkscape:collect="always"
+       xlink:href="#Strips1_2-8"
+       id="pattern3023-61"
+       patternTransform="matrix(1.0606329,0.93929969,-8.5088824,9.6080097,0,0)" />
+    <pattern
+       inkscape:collect="always"
+       patternUnits="userSpaceOnUse"
+       width="3"
+       height="1"
+       patternTransform="translate(0,0) scale(10,10)"
+       id="Strips1_2-8"
+       inkscape:stockid="Stripes 1:2">
+      <rect
+         style="fill:#404040;stroke:none"
+         x="0"
+         y="-0.5"
+         width="1"
+         height="2"
+         id="rect1852-7" />
+    </pattern>
+    <pattern
+       inkscape:collect="always"
+       xlink:href="#Strips1_2-89-2"
+       id="pattern3023-22-1"
+       patternTransform="matrix(0.28062578,0.24852304,-2.2513084,2.5421192,7.6870625,1.4647609)" />
+    <pattern
+       inkscape:collect="always"
+       patternUnits="userSpaceOnUse"
+       width="3"
+       height="1"
+       patternTransform="translate(0,0) scale(10,10)"
+       id="Strips1_2-89-2"
+       inkscape:stockid="Stripes 1:2">
+      <rect
+         style="fill:#404040;stroke:none"
+         x="0"
+         y="-0.5"
+         width="1"
+         height="2"
+         id="rect1852-73-9" />
+    </pattern>
+    <pattern
+       inkscape:collect="always"
+       xlink:href="#Strips1_2-89-4"
+       id="pattern3023-22-19"
+       patternTransform="matrix(0.28062578,0.24852304,-2.2513084,2.5421192,7.6870625,1.4647609)" />
+    <pattern
+       inkscape:collect="always"
+       patternUnits="userSpaceOnUse"
+       width="3"
+       height="1"
+       patternTransform="translate(0,0) scale(10,10)"
+       id="Strips1_2-89-4"
+       inkscape:stockid="Stripes 1:2">
+      <rect
+         style="fill:#404040;stroke:none"
+         x="0"
+         y="-0.5"
+         width="1"
+         height="2"
+         id="rect1852-73-7" />
+    </pattern>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-0.53621482,-0.73960417)">
+    <path
+       id="path1233"
+       style="fill:#ebcb8b;fill-opacity:1;stroke:#ebcb8b;stroke-width:0.499999;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:1.74161;stroke-opacity:0.996078"
+       d="M 1.8942252,5.181983 5.001897,5.646167 6.0386377,8.2133962 C 5.3538529,7.8049318 5.1825696,7.6295082 5.001897,7.6295085 4.7079455,7.6295085 2.6383175,9.170164 2.4005055,8.9973834 2.1626935,8.8246031 2.9879522,6.3799674 2.897116,6.1004029 2.8723272,6.0241121 2.1334389,5.3896481 1.8942252,5.181983 Z"
+       inkscape:transform-center-y="-0.41656046"
+       sodipodi:nodetypes="cccsssc" />
+    <path
+       id="path2535"
+       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#ebcb8b;stroke-width:0.499999;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:6.58246;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+       d="m 5.001897,0.98960367 c 0.2939518,0 1.0634006,2.46323423 1.3012126,2.63601473 C 6.5409216,3.798399 9.12114,3.768767 9.2119761,4.0483316 9.3028121,4.3278964 7.198031,5.820838 7.1071951,6.1004029 7.0163588,6.3799674 7.8416175,8.8246031 7.6038055,8.9973834 7.5121606,9.0639674 6.1947038,8.3083726 6.1947038,8.3083726 L 5.001897,5.646167 1.8942252,5.181983 C 1.2568463,4.6286644 0.7262873,4.2516059 0.79233497,4.0483316 0.88317119,3.768767 3.4633894,3.798399 3.7012014,3.6256184 3.9390134,3.4528379 4.7079455,0.98960367 5.001897,0.98960367 Z"
+       inkscape:transform-center-y="-0.41656046"
+       sodipodi:nodetypes="ssssscccsss" />
+  </g>
+</svg>

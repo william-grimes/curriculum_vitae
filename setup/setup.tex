@@ -1,0 +1,92 @@
+\usepackage[utf8]{inputenc}
+\usepackage{titlesec}
+\usepackage[hidelinks]{hyperref}
+\usepackage[most]{tcolorbox} % for sidebars
+\usepackage{graphicx}
+\usepackage{svg}
+\usepackage{multicol}
+\usepackage{charter} % font
+\usepackage{CJKutf8} % Japanese Characters
+
+\pagestyle{empty}
+
+% colors - https://www.nordtheme.com/docs/colors-and-palettes
+\definecolor{nord0}{HTML}{2E3440} % dark gray
+\definecolor{nord9}{HTML}{81A1C1} % light blue
+\definecolor{nord10}{HTML}{5E81AC} % blue
+\definecolor{nord11}{HTML}{BF616A} % red
+
+\newcommand{\nameColor}[1]{\textcolor{nord11}{#1}}
+\newcommand{\textColor}[1]{\textcolor{nord0}{#1}}
+\newcommand{\barColor}{nord11}
+
+\urlstyle{same}
+
+% how headers look
+\titleformat{\section}{\hide}{}{-1in}{}
+\titleformat{\subsection}{\bfseries \Large}{}{0em}{}%{$\bullet$ }
+
+% formatting specific to one-page layout (smaller margins)
+\fluff
+\else
+\titlespacing{\subsection}{0pt}{0pt}{0pt}
+\addtolength{\topmargin}{-1cm}
+\fi
+
+% define icons and list
+\newcommand\fstar{\includesvg[scale=0.5]{img/star-f} \>}
+\newcommand\lstar{\includesvg[scale=0.5]{img/star-l} \>}
+\newcommand\mstar{\includesvg[scale=0.5]{img/star-m} \>}
+
+\newcommand\fstars{\includesvg[scale=0.3]{img/star-f} \>}
+\newcommand\lstars{\includesvg[scale=0.3]{img/star-l} \>}
+\newcommand\mstars{\includesvg[scale=0.3]{img/star-m} \>}
+
+
+\newcommand\icemail{\includesvg[scale=0.4]{img/email} \>}
+\newcommand\icwebsite{\includesvg[scale=0.4]{img/website} \>}
+\newcommand\icphone{\includesvg[scale=0.4]{img/phone} \>}
+\newcommand\icgithub{\includesvg[scale=0.4]{img/github} \>}
+
+\newenvironment{list2}{
+  \begin{list}{$\bullet$}{%
+      \setlength{\itemsep}{0in}
+      \setlength{\parsep}{0in} \setlength{\parskip}{0in}
+      \setlength{\topsep}{0in} \setlength{\partopsep}{0in}
+      \setlength{\leftmargin}{0.25in}}}{\end{list}}
+
+% graphic: section markers on left side
+\newcommand\makesection[2]{
+    \newtcolorbox{#1}{
+        freelance,
+        width=\dimexpr\columnwidth\relax,
+        before=\par\vspace{\bigskipamount}\noindent,
+        enlarge left by=-14pt,
+        overlay unbroken and first={
+          \draw[ % main line
+          color=\barColor,
+          line width=2pt,
+          ] ([xshift=4pt]frame.north west) -- ([xshift=4pt]frame.south west);
+          \draw[ % top horizontal
+          color=\barColor,
+          line width=2pt,
+          ] ([xshift=3pt]frame.north west) -- ([xshift=8pt]frame.north west);
+          \draw[ % bottom horizontal
+          color=\barColor,
+          line width=2pt,
+          ] ([xshift=3pt]frame.south west) -- ([xshift=8pt]frame.south west);
+          \node[
+          color=\barColor,
+          anchor=east,
+          inner xsep=8pt,
+          xshift=8pt,
+          font=\bfseries,
+          fill=white
+          ] at ([xshift=0.3cm]frame.west) (tit) { \rotatebox[origin=c]{90}{ \large{#2}  }};
+        },
+        frame code={},
+        interior code={},
+        top=0pt,
+        bottom=0pt,
+    }
+}

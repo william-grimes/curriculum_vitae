@@ -1,137 +1,47 @@
-% William Grimes CV
-% URL: https://github.com/williamgrimes/curriculum_vitae
+\documentclass{article}
+\usepackage[a4paper, left=1.0cm, right=1.0cm, bottom=1.0cm, top=1.5cm]{geometry}
 
 
-\documentclass[margin,line]{resume}
+% want a one-page CV? switch the comment between these lines
+% if the \iffalse version is uncommented, \fluff blocks are hidden
+% see below for examples
+\newcommand\fluff{\iftrue}
+%\newcommand\fluff{\iffalse}
 
-\usepackage{CJKutf8}
-\usepackage{tabularx, multirow}
-\usepackage{graphicx}
-\usepackage[hidelinks]{hyperref}
-\usepackage{marvosym} % contact symbols
-\usepackage{pifont}
-\usepackage{charter}
+\input{setup/setup.tex}
+
+\makesection{summary}{SUMMARY}
+\makesection{experience}{EXPERIENCE}
+\makesection{education}{EDUCATION}
+\makesection{skills}{SKILLS}
+\makesection{hobbies}{HOBBIES}
 
 \begin{document}
 
-\name{\Huge \sc{William Grimes}\vspace{2mm}}
-{
-    %\hfill +44 7794070622                                            \ \Mobilefone     \vspace{0mm}\\\vspace{0mm}%
-    %\hfill +33 614865864                                             \ \Mobilefone     \vspace{0mm}\\\vspace{0mm}%
-    \hfill ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\ \vspace{0mm}\\\vspace{0mm}% redatct phone number
-    \hfill \href{mailto:williamgrimes@gmx.com}{williamgrimes@gmx.com} \ \Letter        \vspace{0mm}\\\vspace{0mm}%
-    \hfill \url{http://williamgrimes.xyz/}                        \ \ComputerMouse \vspace{0mm}\\\vspace{-10mm}%
-}
+% Header
+\input{setup/header.tex}
 
-\begin{resume}
+% main cv
+\begin{minipage}{0.25\textwidth} % column 1
+  \begin{summary}
+    \textColor{\input{cv/summary.tex}}
+  \end{summary}
+  \begin{skills}
+    \textColor{\input{cv/programming.tex}}
+  \end{skills}
+  \begin{hobbies}
+    \textColor{\input{cv/hobbies.tex}}
+  \end{hobbies}
+\end{minipage}
+\hfill
+\begin{minipage}{0.70\textwidth} % column 2
+  \begin{experience}
+    \textColor{\input{cv/experience.tex}}
+  \end{experience}
+  \begin{education}
+    \textColor{\input{cv/education.tex}}
+  \end{education}
+\end{minipage}
 
-    %\vspace{-3mm}
-
-    %__________________________________________________________________________________________________________________
-    % Summary
-    \section{\mysidestyle \textbf{\large{S}\small{UMMARY}}}
-
-    \textbf{Data Scientist} focused on applying machine learning to image and geospatial data. Passionate about software development, maintainability, and applying technology for positive social outcomes.
-    %\vspace{-1mm}
-
-\sectionline
-    %__________________________________________________________________________________________________________________
-    % Skills / Keywords
-    \section{\mysidestyle \textbf{\large{S}\small{KILLS}}}
-
-    Python, \hspace{2mm}Java, \hspace{2mm}SQL, \hspace{2mm}R, \hspace{2mm}HTML, \hspace{2mm}CSS, \hspace{2mm}Matlab, \hspace{2mm}Clojure \\
-    % regression, decision trees, ensembles, SVM, neural networks, deep learning \\
-    NumPy, \hspace{2mm}pandas, \hspace{2mm}GeoPandas, \hspace{2mm}SciPy, \hspace{2mm}scikit-learn, \hspace{2mm}scikit-image, \hspace{2mm}OpenCV, \hspace{2mm}PyTorch, \ldots \\
-    % matplotlib, bokeh, plotly, ggplot, Tableau \\
-    %MySQL, PostgreSQL, MS SQL Server\\
-    %Javascript, HTML, CSS, Semantic UI, Jekyll \\
-    Git, \hspace{2mm}Docker, \hspace{2mm}Jenkins, \hspace{2mm}Kafka, \hspace{2mm}Spark, \hspace{2mm}Redis, \hspace{2mm}Jupyter, \hspace{2mm}\LaTeX, \hspace{2mm}UNIX, \hspace{2mm}(AWS \& Azure \& GCP)
-
-\sectionline
-    %__________________________________________________________________________________________________________________
-    % Experience
-    \section{\mysidestyle \textbf{\large{E}\small{XPERIENCE}}}
-
-    \textbf{\listing Numerico Technologies}, Amsterdam / Remote \vspace{2mm}\\\vspace{1mm}%
-    \textsl{Data Scientist} \hfill \textbf{Feb 2018 -- Ongoing}
-    \begin{list2}
-        \item Developed software from initial research to national roll-out to optimise traffic inspector deployments on Dutch highways, reducing average time to attend incidents by 45 \%.
-        \item Led data science research projects on the use of camera data to monitor traffic flow and speed, and analysis of accident blackspots on highways.
-        \item Developed an emergency vehicle routing and travel time engine using GPS trace data.
-        \item Responsible for maintaining cloud infrastructure and developing a CI/CD deployment pipeline using Docker Compose and Jenkins.
-    \end{list2}
-
-    \textbf{\listing Data Science for Social Good}, Lisbon \vspace{2mm}\\\vspace{1mm}%
-    \textsl{Data Scientist / Technical Mentor} \hfill \textbf{Jun 2017 -- Jan 2018}
-    \begin{list2}
-        \item Developed an open-source fishing risk web application using RShiny, combining vessel tracking data with satellite imagery, using random forest to score vessels according to likelihood of illegal fishing behaviours.
-        \item Created a model for predicting road accidents in the Netherlands using a bouquet of classifiers (XGBoost, random forest, SVM) with road features, weather features, and temporal features.
-        %\item Learning car accidents occurrence probability on the Dutch highways using transport, weather and road data.
-        \item Established AWS EC2 and PostgreSQL infrastructure for several teams, whilst mentoring a team of four, giving them technical advice and performing code reviews.
-    \end{list2}
-
-    \textbf{\listing Faculty}, London \vspace{2mm}\\\vspace{1mm}%
-    \textsl{Data Science Consultant} \hfill \textbf{Jan 2017 -- Apr 2017}
-    \begin{list2}
-        %\item Fellowship programme in commercial data science for researchers with strong analytic background.
-        \item Consulted with the London Fire Brigade, implementing topic modelling methods to classify a corpus of 37,000 fire incident reports, which revealed previously unknown fire scenarios.
-        \item Finished intensive eight week training in machine learning, databases, and statistics.
-    \end{list2}
-
-    %\textbf{\listing Laboratory for Molecular Cell Biology (LMCB)} \vspace{2mm}\\\vspace{1mm}%
-    %\textsl{PhD Student} \hfill \textbf{Sep 2013 -- Nov 2016}
-    %\begin{list2}
-    %    \item Joint scholarship at LMCB and A*STAR Bioinformatics Institute, Singapore.
-    %	\item Developed automated image analysis pipelines for use in high-throughput microscopy assays, using machine learning to classify cell organelles.
-    %	%\item Published articles in \emph{Nature Scientific Reports} and \emph{Journal of Thrombosis and Haemostasis}.
-    %\end{list2}
-
-    \textbf{\listing National Institute of Informatics(\begin{CJK}{UTF8}{min}国立情報学研究所\end{CJK})}, Tokyo \vspace{2mm}\\\vspace{1mm}%
-    \textsl{Software Engineer} \hfill \textbf{Jun 2013 -- Sep 2013}
-    \begin{list2}
-      \item Wrote software in Java for annotation and classification of phenotypes in $\mu$CT images of mice.
-    \end{list2}
-
-\sectionline
-    %__________________________________________________________________________________________________________________
-    % Education
-    \section{\mysidestyle \textbf{\large{E}\small{DUCATION}}}
-
-    \vspace{1mm}
-
-    \textbf{\listing PhD Bioinformatics} \vspace{2mm}\\\vspace{1mm}%
-    \textsl{University College London and A*STAR Singapore} \hfill \textbf{Sep 2013 -- Nov 2016}\vspace{-3mm}\\\vspace{-1mm}%
-    \begin{list2}
-        \item Thesis: \emph{Image processing and analysis methods in quantitative endothelial cell biology}
-	\item Developed automated image analysis pipelines for use in high-throughput microscopy assays, using machine learning to segment and classify cell organelles.
-    \end{list2}\vspace{-1.5mm}
-
-    \textbf{\listing MSc Computer Science} \vspace{2mm}\\\vspace{1mm}%
-    \textsl{University College London} \hfill \textbf{Sep 2012 -- Sep 2013}\vspace{-3mm}\\\vspace{-1mm}%
-    \begin{list2}
-        \item Awarded Aardvark Scholarship 2012
-    \end{list2}\vspace{-1.5mm}
-
-    \textbf{\listing BSc Natural Sciences} \vspace{2mm}\\\vspace{1mm}%
-    \textsl{Durham University} \hfill \textbf{Sep 2009 -- Sep 2012}\vspace{-3mm}\\\vspace{-1mm}%
-    \begin{list2}
-        \item Second Class (Division One) Honours - Physics and Geophysics
-    \end{list2}\vspace{-1.5mm}
-
-    \vspace{-1mm}
-
-\sectionline
-    %__________________________________________________________________________________________________________________
-    % Extra
-    \section{\mysidestyle \textbf{\large{H}\small{OBBIES}}}
-
-    In my free time I enjoy cycling, cross-country skiing, learning French, Vipassana meditation, playing chess, and exploring the Ethereum ecosystem.
-
-
-\end{resume}
 \end{document}
 
-%%% Local Variables:
-%%% mode: latex
-%%% TeX-master: t
-%%% End:

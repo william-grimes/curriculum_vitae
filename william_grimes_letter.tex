@@ -1,0 +1,38 @@
+\documentclass[a4paper, 11pt]{letter}
+
+\newcommand{\letterContent}{letter/boilerplate.tex} % change content
+
+
+\usepackage{geometry}
+\geometry{
+  left=2.5cm,
+  right=2.5cm,
+  bottom=2.5cm,
+  top=5.0cm,
+  headheight=5.0cm,
+  headsep=0.50cm,
+}
+\usepackage{lipsum}
+\usepackage{lastpage}
+\usepackage{layout}
+\usepackage{fancyhdr}
+
+\newcommand\fluff{\iftrue} % unused
+
+\input{setup/setup.tex}
+
+\pagestyle{fancy}
+\cfoot{\thepage\ of \pageref{LastPage}} % e.g. page 1 of 2
+
+\renewcommand{\headrulewidth}{0.5pt}
+\fancyhead[C]{
+  \input{setup/header.tex}
+}
+
+\makeatletter
+\let\ps@firstpage\ps@fancy
+\makeatother
+
+\begin{document}
+\input{\letterContent}
+\end{document}
