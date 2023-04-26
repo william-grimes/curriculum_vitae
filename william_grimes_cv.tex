@@ -1,19 +1,29 @@
 \documentclass{article}
 \usepackage[a4paper, left=1.0cm, right=1.0cm, bottom=1.0cm, top=1.0cm]{geometry}
 
+\input{setup/setup.tex}
 
 % want a one-page CV? switch the comment between these lines
 % if the \iffalse version is uncommented, \fluff blocks are hidden
 % see below for examples
-\newcommand\fluff{\iftrue}
-%\newcommand\fluff{\iffalse}
+%\newcommand\fluff{\iftrue}
+\newcommand\fluff{\iffalse}
 
-\input{setup/setup.tex}
+% how headers look
+\titleformat{\section}{\hide}{}{-1in}{}
+\titleformat{\subsection}{\bfseries \Large}{}{0em}{}%{$\bullet$ }
+
+% formatting specific to one-page layout (smaller margins)
+\fluff
+  \titlespacing{\subsection}{0pt}{10pt}{0pt}
+\else
+  \titlespacing{\subsection}{0pt}{0pt}{0pt}
+\fi
 
 \makesection{summary}{SUMMARY}
 \makesection{experience}{EXPERIENCE}
 \makesection{education}{EDUCATION}
-\makesection{skills}{SKILLS}
+\makesection{tech}{TECH}
 \makesection{hobbies}{HOBBIES}
 
 \begin{document}
@@ -22,26 +32,35 @@
 \input{setup/header.tex}
 
 % main cv
-\begin{minipage}{0.25\textwidth} % column 1
+\begin{minipage}[t]{0.25\textwidth} % column 1, align to top of page
   \begin{summary}
     \textColor{\input{cv/summary.tex}}
   \end{summary}
-  \begin{skills}
-    \textColor{\input{cv/programming.tex}}
-  \end{skills}
+  \begin{tech}
+    \textColor{\input{cv/tech.tex}}
+  \end{tech}
   \begin{hobbies}
     \textColor{\input{cv/hobbies.tex}}
   \end{hobbies}
 \end{minipage}
 \hfill
-\begin{minipage}{0.70\textwidth} % column 2
+\begin{minipage}[t]{0.75\textwidth} % column 2, align to top of page
   \begin{experience}
+    \vspace{-15pt}
     \textColor{\input{cv/experience.tex}}
   \end{experience}
   \begin{education}
+    \vspace{-15pt}
     \textColor{\input{cv/education.tex}}
   \end{education}
 \end{minipage}
 
+\vfill
+\textColor{Extended CV here: \href{https://williamgrimes.xyz/pages/cv}{williamgrimes.xyz/pages/cv}}
 \end{document}
 
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:

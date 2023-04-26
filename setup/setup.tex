@@ -5,8 +5,8 @@
 \usepackage{graphicx}
 \usepackage{svg}
 \usepackage{multicol}
-\usepackage{charter} % font
-\usepackage{CJKutf8} % Japanese Characters
+%\usepackage{CJKutf8} % Japanese Characters (conflicts with bold)
+\usepackage[bitstream-charter]{mathdesign}
 
 \pagestyle{empty}
 
@@ -15,23 +15,15 @@
 \definecolor{nord9}{HTML}{81A1C1} % light blue
 \definecolor{nord10}{HTML}{5E81AC} % blue
 \definecolor{nord11}{HTML}{BF616A} % red
+\definecolor{nord14}{HTML}{A3BE8C} % green
 
 \newcommand{\nameColor}[1]{\textcolor{nord11}{#1}}
 \newcommand{\textColor}[1]{\textcolor{nord0}{#1}}
+\newcommand{\textColorBlue}[1]{\textcolor{nord9}{#1}}
+\newcommand{\textColorGreen}[1]{\textcolor{nord14}{#1}}
 \newcommand{\barColor}{nord11}
 
 \urlstyle{same}
-
-% how headers look
-\titleformat{\section}{\hide}{}{-1in}{}
-\titleformat{\subsection}{\bfseries \Large}{}{0em}{}%{$\bullet$ }
-
-% formatting specific to one-page layout (smaller margins)
-\fluff
-\else
-\titlespacing{\subsection}{0pt}{0pt}{0pt}
-\addtolength{\topmargin}{-1cm}
-\fi
 
 % define icons and list
 \newcommand\fstar{\includesvg[scale=0.5]{img/star-f} \>}
